@@ -1,0 +1,288 @@
+/***** CSS *******/
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 75px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3c4785;
+}
+
+.section1 {
+    background-color: #217091;
+    height: 100%;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 75px;
+    margin-left: -8px;
+    top: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.titleText:hover > *{
+    opacity: 1;
+}
+
+header .himage {
+    width: auto;
+    height: auto;
+    max-height: 100px;
+    max-width: 100px;
+    margin-top: 5px;
+    margin-left: 20px;
+    transition: all 1s;
+    opacity: 1;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.hTitle {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: antiquewhite;
+    font-size: 55px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px;
+    transition: all 1s;
+}
+
+.hTitle:hover {
+    text-shadow: red 2px 5px;
+    color: darkcyan;
+}
+
+.hTitle2 {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: antiquewhite;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 30px;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px;
+    transition: all 1s;
+    opacity: 0;
+}
+
+.hTitle2:hover {
+    text-shadow: red 2px 2px;
+    color: darkcyan;
+}
+
+.title {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: darkcyan;
+    font-size: 50px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    text-shadow: red 2px 5px;
+    transition: text-shadow 1s, color 1s, letter-spacing 0.25s 0.25s;
+}
+
+.title:hover {
+    text-shadow: 0px 0px;
+    color: orange;
+    letter-spacing: -2px;
+    background: linear-gradient(to right, cyan, orange, orange, orange, orange ,orange);
+    -webkit-text-fill-color: transparent;   
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 400%;
+    background-position: -50%;
+    animation: wipe 3s;
+}
+
+@keyframes wipe{
+    to {background-position: 50%;}
+}
+
+ul.listFont {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: cyan;
+    font-size: 18px;
+    text-align: left;
+    list-style-type: none;
+    width: 35%;
+    animation-duration: 4s;
+    animation-name: var(--name);
+}
+
+
+
+.line0 {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: antiquewhite;
+    font-size: 90px;
+    margin-top: 100px;
+    margin-left: 38%;
+    font-variant: small-caps;
+    text-shadow: 0px 0px;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    position: relative;
+    transition: all 1s;
+}
+
+.line0::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background-color: #3c4785;
+    
+    transition: width 0.5s ease-out;
+    
+}
+
+.line0:hover::before{
+    width: 100%;
+}
+
+.line0:hover {
+    text-shadow: #3c4785 7px 7px;
+}
+
+.intro {
+    width: 50%;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: antiquewhite;
+    font-size: 20px;
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-weight: 900;
+}
+
+.line1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.line2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 150px;
+}
+
+.line3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 150px;
+}
+
+
+
+
+h1.mainImage{
+
+    opacity:0;
+
+}
+
+.mainImage:hover >*{
+    opacity:1;
+
+
+}
+
+
+
+@keyframes slideinLeft {
+    from {
+        opacity: 0;
+        margin-left: -40%;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideinRight {
+    from {
+        opacity: 0;
+        margin-right: -40%;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes Fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.mainImage {
+    width: var(--width);
+    animation-duration: 4s;
+    animation-name: Fade;
+    box-shadow: 10px 10px 6px black;
+    border-radius: 30px;
+    border-color: black;
+    padding: 5px;
+    transition: all 1s;
+    cursor:pointer;
+}
+
+.container:hover .mainImage{
+    box-shadow: 0;
+}
+
+
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: 75px;
+    margin-left: -8px;
+    margin-bottom:0px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+a.footer {
+
+    color: cyan;
+    font-size:10px;
+
+}
